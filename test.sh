@@ -38,8 +38,14 @@ make -s 8cc
 test 0 0
 test abc '"abc"'
 
+test 3 '1+2'
+test 3 '1 + 2'
+test 11 '2+2+3+4'
+test 1 '3- 2'
+
 testfail '"abc'
 testfail '0abc'
+testfail '1+'
 
 echo "All tests passed"
 
